@@ -1,0 +1,33 @@
+[project]
+name = "JaneStreetPuzzles"
+version = "0.1.0"
+description = "JaneStreet puzzles"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyterlab>=4.4.2",
+    "matplotlib>=3.10.3",
+    "numpy>=2.2.5",
+    "python-lsp-ruff>=2.2.2",
+    "python-lsp-server>=1.12.2",
+    "ruff>=0.11.8",
+    "sympy>=1.14.0",
+    "watchfiles>=1.0.5",
+    "z3-solver==4.12.4",
+]
+
+[tool.uv.workspace]
+members = ["janestreet-puzzles"]
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
+
+[tool.ruff.lint]
+ignore = ["E731", "E741", "F401"]
+
+[tool.ruff.lint.isort]
+no-sections = true
+
+[tool.ruff.lint.pycodestyle]
+max-line-length = 100
